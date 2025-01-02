@@ -1,0 +1,36 @@
+import java.util.Stack;
+public class stackUsingCollection  {
+    static class stack{
+        Stack<Integer> s= new Stack<>();
+        public void push(int x){
+            s.add(x);
+        }
+        public int pop(){
+            if(s.size()==0)
+                return -1;
+            return s.remove(s.size()-1);
+        }
+        public int peek(){
+            if(s.size()==0) return -1;
+            return  s.get(s.size()-1);
+
+        }
+        public boolean isEmpty(){
+            return s.size()==0;
+        }
+    }
+    
+    
+
+    public static void main(String[] args) {
+        Stack st = new Stack();
+        st.push(1);
+        st.push(2);
+        st.push(3);
+        System.out.println(st.peek());
+        System.out.println(st.pop());
+        System.out.println(st.peek());
+        while(!st.isEmpty()){
+            System.out.println(st.pop());
+    }
+}}
